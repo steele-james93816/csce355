@@ -2,7 +2,7 @@ import sys
 
 
 def main():
-    inputfile = open("./dfaExamples/example1.txt")
+    inputfile = open("dfaExample.txt")
     lineCount = 0
     stateNum = 0
     accStates = []
