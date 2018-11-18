@@ -23,7 +23,9 @@ def main():
 		#This error occurs if any of the files do not exist
 		sys.exit("Unable to locate file: {0}".format(str(err).split()[-1]))
 
-	dfa1.makeDfa(dfa_file)
+	dfa1.makeDfa(dfa_file)	#Creating the dfa from the file using the dfa class
+
+	dfa1.printDfa()
 
 	for line in testFile:
 		line = line.replace("\n","")
@@ -32,13 +34,19 @@ def main():
 		else:
 			print("not accepted")
 
+
+'''
+This method takes in the dfa object and the string that the user wants to test and it returns a bool value
+True -> Accepted
+False -> Not Accepted
+'''
+
 def acceptReject(dfa,testString):
 	numberAlphabet = len(dfa.getAlpha())
 	alphabetList = list(dfa.getAlpha())
 	transitions = dfa.getTransitionStates()
 	currentLocation = 0
 
-	print("\n",testString)
 	for character in list(testString):
 		if character not in list(dfa.getAlpha()):
 			return False

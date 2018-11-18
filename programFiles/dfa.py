@@ -24,6 +24,12 @@ class DFA:
 	def setTransitionStates(self,transStates):
 		self.transitionStates = transStates
 
+	def printDfa(self):
+		print("Number of states: ", self.numStates, "\nAccepting states: ", self.acceptingStates, "\nAlphabet: ", self.alphabet)
+		for states in self.transitionStates:
+			print(states)
+
+
 	def makeDfa(self,inputfile):
 		lineCount = 0
 		stateNum = 0
@@ -36,7 +42,7 @@ class DFA:
 
 			if lineCount == 1:
 				tmpLine = line.split()
-				stateNum = tmpLine[3]
+				stateNum = tmpLine[-1]
 			if lineCount == 2:
 				accStates = line.replace("Accepting states:","").split()
 			if lineCount == 3:
