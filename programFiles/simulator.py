@@ -25,14 +25,14 @@ def main():
 
 	dfa1.makeDfa(dfa_file)	#Creating the dfa from the file using the dfa class
 
-	dfa1.printDfa()
+	#dfa1.printDfa()
 
 	for line in testFile:
 		line = line.replace("\n","")
 		if acceptReject(dfa1,line):
-			print("accepted")
+			print("accept")
 		else:
-			print("not accepted")
+			print("reject")
 
 
 '''
@@ -41,16 +41,20 @@ True -> Accepted
 False -> Not Accepted
 '''
 
-def acceptReject(dfa,testString):
+def acceptReject(dfa,testString):		
 	numberAlphabet = len(dfa.getAlpha())
 	alphabetList = list(dfa.getAlpha())
 	transitions = dfa.getTransitionStates()
 	currentLocation = 0
 
+	if len(testString) == 0 and ('0' in dfa.getAcceptingStates()):
+		return True
+
 	for character in list(testString):
 		if character not in list(dfa.getAlpha()):
 			return False
 		charIndex = alphabetList.index(character)
+
 		currentLocation = transitions[int(currentLocation)][int(charIndex)]
 
 	if currentLocation not in dfa.getAcceptingStates():

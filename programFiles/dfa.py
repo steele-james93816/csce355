@@ -46,7 +46,7 @@ class DFA:
 			if lineCount == 2:
 				accStates = line.replace("Accepting states:","").split()
 			if lineCount == 3:
-				alphabet = line.replace("Alphabet:","").strip()
+				alphabet = line.replace("Alphabet: ","").replace("\n","")			
 			if lineCount > 3:
 				transitions.append(line.split())
 
