@@ -35,8 +35,9 @@ class DFA:
 	'''
 	def getAcceptingStates(self):				#Returns the list that is the accepting states of the DFA
 		return self.acceptingStates
-	def setAcceptingStates(self,accStates):		#Sets the list of accepting states from the DFA file
+	def setAcceptingStates(self,accStates):		#Sets the list of accepting states from the DFA file	
 		self.accceptingStates = accStates
+
 
 	'''
 	Setting the transition table of the dfa.

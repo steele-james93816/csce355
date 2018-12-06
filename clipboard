@@ -63,3 +63,6 @@ if currentLocation != 0:
 			if visitedStates.index(destination) - 1 != 0:
 				visitedStates = visitedStates[0::visitedStates.index(destination) - 1]
 
+
+
+64 57 91

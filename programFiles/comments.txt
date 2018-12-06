@@ -1,0 +1,41 @@
+Building Simulate...
+Running Simulate...
+    python3 ./simulator.py ./dfaExamples/test-cases/simulator/bigDFA.txt ./dfaExamples/test-cases/simulator/bigDFA-strings.txt
+    python3 ./simulator.py ./dfaExamples/test-cases/simulator/biggerDFA.txt ./dfaExamples/test-cases/simulator/biggerDFA-strings.txt
+    python3 ./simulator.py ./dfaExamples/test-cases/simulator/handoutDFA.txt ./dfaExamples/test-cases/simulator/handoutDFA-strings.txt
+    python3 ./simulator.py ./dfaExamples/test-cases/simulator/randomDFA1.txt ./dfaExamples/test-cases/simulator/randomDFA1-strings.txt
+    python3 ./simulator.py ./dfaExamples/test-cases/simulator/randomDFA2.txt ./dfaExamples/test-cases/simulator/randomDFA2-strings.txt
+    python3 ./simulator.py ./dfaExamples/test-cases/simulator/randomDFA3.txt ./dfaExamples/test-cases/simulator/randomDFA3-strings.txt
+    python3 ./simulator.py ./dfaExamples/test-cases/simulator/randomDFA4.txt ./dfaExamples/test-cases/simulator/randomDFA4-strings.txt
+    python3 ./simulator.py ./dfaExamples/test-cases/simulator/randomDFA5.txt ./dfaExamples/test-cases/simulator/randomDFA5-strings.txt
+  Run succeeded, comparing output...
+  No errors encountered
+Building Invhom...
+Running Invhom...
+    python3 ./invHom.py ./dfaExamples/test-cases/invhom/bigDFA.txt ./dfaExamples/test-cases/invhom/bigDFA-hom.txt
+    python3 ./invHom.py ./dfaExamples/test-cases/invhom/biggerDFA.txt ./dfaExamples/test-cases/invhom/biggerDFA-hom.txt
+    python3 ./invHom.py ./dfaExamples/test-cases/invhom/handoutDFA.txt ./dfaExamples/test-cases/invhom/handoutDFA-hom.txt
+    python3 ./invHom.py ./dfaExamples/test-cases/invhom/randomDFA1.txt ./dfaExamples/test-cases/invhom/randomDFA1-hom.txt
+    python3 ./invHom.py ./dfaExamples/test-cases/invhom/randomDFA2.txt ./dfaExamples/test-cases/invhom/randomDFA2-hom.txt
+    python3 ./invHom.py ./dfaExamples/test-cases/invhom/randomDFA3.txt ./dfaExamples/test-cases/invhom/randomDFA3-hom.txt
+  Run succeeded, comparing output...
+  No errors encountered
+-----------------------------------------------------
+Simulate: execution always completed without errors.
+progress level 5 with 0 execution errors
+
+Minimize: not implemented -- minimizer.txt does not exist
+progress level 0 with 0 execution errors
+
+Searcher: not implemented -- searcher.txt does not exist
+progress level 0 with 0 execution errors
+
+Boolop: not implemented -- boolop.txt does not exist
+progress level 0 with 0 execution errors
+
+Invhom: execution always completed without errors.
+progress level 5 with 0 execution errors
+
+Properties: not implemented -- properties.txt does not exist
+progress level 0 with 0 execution errors
+
