@@ -2,7 +2,7 @@ import sys
 from dfa import DFA
 
 def invHom():
-	dfa1 = DFA()	#This is the initial DFA defined by the exampleDFA.txt
+	dfa1 = DFA()			#This is the initial DFA defined by the exampleDFA.txt
 	inputAlphabet = ""
 	outputAlphabet = ""
 	testStrings = []
@@ -59,10 +59,15 @@ def invHom():
 			tmpStr = tmpStr + " "
 		numCount = numCount + 1
 	print("Accepting states:",tmpStr)
-	print("Alphabet: ",inputAlphabet)
+	print("Alphabet:",inputAlphabet)
 	for i in answer:
+		counter = 0
 		for j in i:
-			print(j, end = " ")
+			if counter == len(i) - 1:
+				print(j, end = "")
+			else:
+				print(j, end = " ")
+			counter = counter + 1
 		print()
 
 def findFinal(dfa,testString,startingState):		

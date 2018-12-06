@@ -1,0 +1,65 @@
+Simulator tests
+------------------------------------
+python3 ./simulator.py dfaExamples/test-cases/simulator/bigDFA.txt dfaExamples/test-cases/simulator/bigDFA-strings.txt
+
+dfaExamples/test-cases/simulator/bigDFA-strings-answers.txt
+
+
+sdiff -l dfaExamples/test-cases/simulator/bigDFA-strings-answers.txt out.txt | cat -n | grep -v -e '($'
+
+Properties tests
+-------------------------------------
+python3
+
+numAlphabet = len(dfa.getAlpha())
+	transitions = dfa.getTransitionStates()
+	numStates = int(dfa.getNumStates())
+	finals = dfa.getAcceptingStates()
+	currentLocation = 0
+
+	for i in range(numStates):
+		for j in range(numAlphabet - 1):
+			print (transitions[i][j])
+
+'''
+	if madeloop == False:
+		for i in range(len(visitedStates)):
+			if i in finals:
+				return "finite"
+	else:
+		return "finite"
+'''
+	
+
+
+			vs = visitedStates[visitedStates.index(destination)::]
+			print (visitedStates)
+			print (vs)
+			for i in range(len(vs)):
+				if vs[i] in finals:
+					finalAnswer[1] = True
+
+if currentLocation != 0:
+			visitedStates = visitedStates[::visitedStates.index(currentLocation) - 1]
+
+
+
+		print (currentLocation)
+		destination = transitions[currentLocation][j]
+		#print (destination)
+		#print (visitedStates)
+		if destination not in visitedStates:
+			visitedStates.append(destination)
+			if destination in finals:
+				finalAnswer[0] = True
+			testInf(dfa,int(destination),visitedStates,madeloop,finalAnswer)
+		else:
+			print (visitedStates)
+			vs = visitedStates[visitedStates.index(destination)::]
+			print (vs)
+			for i in range(len(vs)):
+				if vs[i] in finals:
+					finalAnswer[1] = True
+			if visitedStates.index(destination) - 1 != 0:
+				visitedStates = visitedStates[0::visitedStates.index(destination) - 1]
+
